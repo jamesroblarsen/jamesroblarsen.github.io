@@ -1,0 +1,4 @@
+Copyright (c) 2026 James Larsen. All rights reserved.
+
+This repository holds only the built hub page. Each game is © James Larsen under its own terms.
+The Pixelify Sans font is under the SIL Open Font License (fonts/OFL-pixelify-sans.txt).
