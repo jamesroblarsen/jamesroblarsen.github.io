@@ -1,4 +1,4 @@
-# Jim's Games
+# Fourth Meridian
 
 The built hub page, served at https://jamesroblarsen.github.io/
 
