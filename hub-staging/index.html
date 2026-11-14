@@ -32,6 +32,16 @@
   <link rel="preload" href="fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/ibm-plex-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      if (location.hostname !== 'fourthmeridiangames.com' || location.pathname.indexOf('-staging/') !== -1 || navigator.webdriver) return;
+      var s = document.createElement('script');
+      s.defer = true;
+      s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      s.setAttribute('data-cf-beacon', '{"token": "ee646f7d364542db8e29edfc21db0a1f"}');
+      document.head.appendChild(s);
+    })();
+  </script>
 </head>
 <body>
   <div class="page">
@@ -84,7 +94,7 @@
   </main>
   <footer>
     <div class="rule"><span>Fourth Meridian Games</span><span>110° W</span></div>
-    <p>© 2026 James Larsen. All rights reserved. This site sets no cookies and loads nothing from other sites. Each game lists its own privacy notes, terms and data sources.</p>
+    <p>© 2026 James Larsen. All rights reserved. This site sets no cookies. It counts visits with Cloudflare Web Analytics, which stores nothing on your device and shows me only totals; it loads nothing else from other sites. Each game lists its own privacy notes, terms and data sources.</p>
     <p>Type: Cormorant Garamond and IBM Plex Sans, under the SIL Open Font License (<a href="fonts/OFL-cormorant-garamond.txt">1</a>, <a href="fonts/OFL-ibm-plex-sans.txt">2</a>).</p>
   </footer>
   </div>
