@@ -445,6 +445,31 @@ nav .sep {
   stroke-width: 1.6;
 }
 
+.art-tile {
+  fill: var(--rule);
+}
+
+.art-tile-near {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+}
+
+.art-tile-empty {
+  fill: none;
+  stroke: var(--rule-strong);
+  stroke-width: 1.2;
+}
+
+.art-tile-letter {
+  fill: var(--ink);
+  font: 600 24px var(--serif);
+}
+
+.art-tile-letter.on-gold {
+  fill: var(--gold-ink);
+}
+
 .art-order,
 .art-order-head {
   fill: none;
@@ -727,4 +752,219 @@ footer p {
   .arrow {
     transition: none;
   }
+}
+
+/* Game pages, privacy, terms and the press kit: one reading column, sections ruled like the footer. */
+
+.doc-page {
+  padding: 44px 0 0;
+  max-width: 820px;
+}
+
+.doc-page .crumbs {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font: 500 11px/1 var(--sans);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.doc-page .crumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.doc-page .crumbs a:hover {
+  color: var(--gold);
+}
+
+.doc-lede {
+  margin: -12px 0 22px;
+  color: var(--ink);
+  font: 600 clamp(20px, 2.4vw, 26px)/1.3 var(--serif);
+}
+
+.doc-page section {
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.doc-page h2 {
+  margin: 0 0 14px;
+  color: var(--gold);
+  font: 500 12px/1 var(--sans);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.doc-page h3 {
+  margin: 18px 0 6px;
+  font: 600 21px/1.2 var(--serif);
+}
+
+.doc-page p,
+.doc-page li,
+.doc-page dd {
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+.doc-page p {
+  margin: 0 0 12px;
+}
+
+.doc-page a:not(.play) {
+  color: var(--ink);
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 3px;
+}
+
+.doc-page ol,
+.doc-page ul {
+  margin: 0 0 12px;
+  padding-left: 1.3em;
+}
+
+.doc-page li {
+  margin: 0 0 8px;
+}
+
+.doc-page dt {
+  margin: 16px 0 4px;
+  color: var(--ink);
+  font: 600 19px/1.25 var(--serif);
+}
+
+.doc-page dd {
+  margin: 0;
+}
+
+.game-shot {
+  margin: 0 0 20px;
+  background: var(--card);
+  border: 1px solid var(--rule-strong);
+}
+
+.game-shot img,
+.game-shot .art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.game-shot .art {
+  max-height: 320px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.doc-page .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.doc-page .tag-row li {
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid var(--rule-strong);
+  color: var(--muted);
+  font: 500 10px/1 var(--sans);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.doc-page .related {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.doc-page .related li {
+  margin: 0;
+  padding: 16px 18px;
+  background: var(--card);
+  border: 1px solid var(--rule-strong);
+}
+
+.related a {
+  text-decoration: none;
+}
+
+.related strong {
+  display: block;
+  color: var(--ink);
+  font: 600 22px/1.15 var(--serif);
+}
+
+.related span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.related a:hover strong {
+  color: var(--gold-bright);
+}
+
+.press-assets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.press-assets li {
+  margin: 0;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--rule-strong);
+  font-size: 13px;
+}
+
+.press-assets img {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.press-assets .on-paper img {
+  background: var(--paper, #fbf6ec);
+}
+
+.press-game {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.press-game img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+@media (max-width: 640px) {
+  .press-game {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.desc .how {
+  color: var(--gold);
+  white-space: nowrap;
+  text-decoration-color: rgba(212, 169, 67, 0.4);
+  text-underline-offset: 3px;
 }
