@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
 Disallow: /hub-staging/
+Disallow: /foldout-staging/
 Disallow: /trendle-staging/
+Disallow: /streetle-staging/
+Disallow: /diplomacy-school-staging/
 Disallow: /hatama-staging/
 
 Sitemap: https://fourthmeridiangames.com/sitemap.xml

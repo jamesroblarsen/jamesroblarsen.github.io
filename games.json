@@ -1,0 +1,50 @@
+{
+  "site": "https://fourthmeridiangames.com/",
+  "name": "Fourth Meridian Games",
+  "games": [
+    {
+      "id": "trendle",
+      "name": "Trendle",
+      "url": "https://fourthmeridiangames.com/trendle/",
+      "page": "https://fourthmeridiangames.com/games/trendle/",
+      "tagline": "Draw the rest of history.",
+      "tags": [
+        "Daily",
+        "History",
+        "Data"
+      ],
+      "frequency": "daily",
+      "image": "https://fourthmeridiangames.com/trendle/og.png?v=2",
+      "added": "2026-11-04"
+    },
+    {
+      "id": "streetle",
+      "name": "Streetle",
+      "url": "https://fourthmeridiangames.com/streetle/",
+      "page": "https://fourthmeridiangames.com/games/streetle/",
+      "tagline": "Name the city from its streets.",
+      "tags": [
+        "Daily",
+        "Geography",
+        "Cities"
+      ],
+      "frequency": "daily",
+      "image": "https://fourthmeridiangames.com/streetle/og.png?v=1",
+      "added": "2026-11-14"
+    },
+    {
+      "id": "diplomacy-school",
+      "name": "Diplomacy School",
+      "url": "https://fourthmeridiangames.com/diplomacy-school-play/",
+      "page": "https://fourthmeridiangames.com/games/diplomacy-school/",
+      "tagline": "Learn the board game Diplomacy.",
+      "tags": [
+        "Learn",
+        "Strategy"
+      ],
+      "frequency": "lessons",
+      "image": "https://fourthmeridiangames.com/diplomacy-school-play/og.png?v=1",
+      "added": "2026-10-13"
+    }
+  ]
+}
