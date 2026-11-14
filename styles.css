@@ -542,6 +542,50 @@ footer p {
 
 /* Tablet: two columns; the featured card spans the width. */
 
+/* The contact page: the email address in one inset card, styled like the game cards. */
+
+.contact-page {
+  padding: 44px 0 0;
+  max-width: 660px;
+}
+
+.contact-lede {
+  margin: 0 0 28px;
+  color: var(--ink);
+  font: 600 clamp(20px, 2.4vw, 25px)/1.3 var(--serif);
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: var(--pad);
+  background: var(--card);
+  border: 1px solid var(--rule-strong);
+  border-radius: 1px;
+}
+
+.contact-label {
+  margin: 0;
+  color: var(--ink);
+  font: 500 12px/1 var(--sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.contact-address {
+  margin: 0 0 8px;
+  font: 600 clamp(20px, 3vw, 26px)/1.25 var(--serif);
+  overflow-wrap: anywhere;
+}
+
+.contact-address a {
+  color: var(--ink);
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 4px;
+}
+
 @media (max-width: 980px) {
   .games {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -591,8 +635,13 @@ footer p {
     padding: 30px 0 24px;
   }
 
-  .about-page {
+  .about-page,
+  .contact-page {
     padding-top: 28px;
+  }
+
+  .contact-card {
+    padding: 16px;
   }
 
   .about-grid {
