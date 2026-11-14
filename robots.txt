@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /hub-staging/
+Disallow: /trendle-staging/
+Disallow: /hatama-staging/
 
 Sitemap: https://fourthmeridiangames.com/sitemap.xml
