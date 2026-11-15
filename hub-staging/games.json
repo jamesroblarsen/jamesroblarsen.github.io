@@ -41,11 +41,12 @@
       "page": "https://fourthmeridiangames.com/games/hatama/",
       "tagline": "Guess the Batak Toba word.",
       "tags": [
+        "Daily",
         "Words",
         "Language"
       ],
       "appeal": "niche",
-      "frequency": "endless",
+      "frequency": "daily",
       "image": "https://fourthmeridiangames.com/hatama/og.png?v=1",
       "added": "2026-11-12"
     },
