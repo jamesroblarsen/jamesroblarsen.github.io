@@ -13,6 +13,7 @@
         "History",
         "Data"
       ],
+      "appeal": "broad",
       "frequency": "daily",
       "image": "https://fourthmeridiangames.com/trendle/og.png?v=2",
       "added": "2026-11-04"
@@ -28,6 +29,7 @@
         "Geography",
         "Cities"
       ],
+      "appeal": "broad",
       "frequency": "daily",
       "image": "https://fourthmeridiangames.com/streetle/og.png?v=1",
       "added": "2026-11-14"
@@ -42,6 +44,7 @@
         "Words",
         "Language"
       ],
+      "appeal": "niche",
       "frequency": "endless",
       "image": "https://fourthmeridiangames.com/hatama/og.png?v=1",
       "added": "2026-11-12"
@@ -56,6 +59,7 @@
         "Learn",
         "Strategy"
       ],
+      "appeal": "niche",
       "frequency": "lessons",
       "image": "https://fourthmeridiangames.com/diplomacy-school-play/og.png?v=1",
       "added": "2026-10-13"
