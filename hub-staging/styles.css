@@ -968,3 +968,208 @@ footer p {
   text-decoration-color: rgba(212, 169, 67, 0.4);
   text-underline-offset: 3px;
 }
+
+/* Glossle: the shelf of word games in less-played languages. A wider page than the reading column, cards like the hub's. */
+
+.glossle-page {
+  max-width: none;
+}
+
+.glossle-page > p,
+.glossle-page section > p,
+.glossle-page section > ol {
+  max-width: 68ch;
+}
+
+.glossle-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px 40px;
+}
+
+.glossle-word {
+  width: min(326px, 100%);
+  height: auto;
+  margin-bottom: 26px;
+}
+
+.glossle-page .glossle-etym {
+  margin: 0 0 14px;
+  color: var(--faint);
+  font: italic 600 18px/1.3 var(--serif);
+}
+
+.glossle-etym i {
+  color: var(--ink);
+}
+
+.doc-page .lang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.doc-page .lang-grid > li {
+  margin: 0;
+  max-width: none;
+}
+
+.lang-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--card);
+  border: 1px solid var(--rule-strong);
+}
+
+.lang-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: stretch;
+  background: var(--card-head);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.lang-head > div {
+  padding: 14px 18px;
+}
+
+.doc-page .lang-head h3 {
+  margin: 0;
+  font: 600 25px/1.05 var(--serif);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.doc-page .lang-native {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font: italic 600 17px/1.2 var(--serif);
+}
+
+.lang-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px var(--pad) var(--pad);
+}
+
+.lang-body .picture .art {
+  max-height: 150px;
+}
+
+.doc-page .lang-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 14px;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+
+.doc-page .lang-facts dt {
+  margin: 0;
+  color: var(--faint);
+  font: 500 10px/1.9 var(--sans);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.doc-page .lang-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.doc-page .lang-note {
+  margin: 0;
+  font-size: 14px;
+}
+
+.doc-page .lang-slot {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.doc-page .lang-slot p {
+  color: var(--faint);
+}
+
+@media (max-width: 980px) {
+  .doc-page .lang-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .doc-page .lang-slot:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .doc-page .lang-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-page .lang-slot {
+    min-height: 120px;
+  }
+
+  .doc-page .lang-slot:nth-of-type(n + 3) {
+    display: none;
+  }
+
+  .glossle-word {
+    margin-bottom: 0;
+  }
+}
+
+/* A language card's tiles carry their game's own colours and lettering, not the hub's. */
+.art.lang-tiles text {
+  font: 700 19px 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* The Glossle title tiles: a scored guess in the brand's colours. Brass = in place, paper = in the word, slate = not in it. */
+.gt-hit { fill: var(--gold); }
+.gt-near { fill: var(--ink); }
+.gt-miss { fill: #2a3b52; }
+.gt-letter { font: 600 22px var(--sans); }
+.gt-hit-ink,
+.gt-near-ink { fill: var(--gold-ink); }
+.gt-miss-ink { fill: var(--ink); }
+
+/* The home page's Glossle cell: a card like the games, holding the Glossle title tiles instead of a drawing. */
+.card.shelf .num {
+  font-style: italic;
+}
+
+.card.shelf .shelf-word {
+  justify-content: center;
+}
+
+.card.shelf .glossle-word {
+  width: 100%;
+  max-width: 300px;
+  margin: 8px 0;
+}
+
+.card.shelf .desc a {
+  color: var(--ink);
+}
+
+/* On a Glossle game's How to play page: the line that links Glossle. */
+.game-page .glossle-note {
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .glossle-title .glossle-word {
+    margin-bottom: 10px;
+  }
+}
