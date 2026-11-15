@@ -33,6 +33,20 @@
       "added": "2026-11-14"
     },
     {
+      "id": "hatama",
+      "name": "Hatama",
+      "url": "https://fourthmeridiangames.com/hatama/",
+      "page": "https://fourthmeridiangames.com/games/hatama/",
+      "tagline": "Guess the Batak Toba word.",
+      "tags": [
+        "Words",
+        "Language"
+      ],
+      "frequency": "endless",
+      "image": "https://fourthmeridiangames.com/hatama/og.png?v=1",
+      "added": "2026-11-12"
+    },
+    {
       "id": "diplomacy-school",
       "name": "Diplomacy School",
       "url": "https://fourthmeridiangames.com/diplomacy-school-play/",
