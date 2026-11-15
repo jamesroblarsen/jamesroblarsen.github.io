@@ -20,21 +20,12 @@
   function withFrom(url, id) {
     return url + (url.indexOf('?') === -1 ? '?' : '&') + 'from=' + encodeURIComponent(id);
   }
-  // Same order as the hub's relatedGames(): shared tags (Daily counts half), then the hub's own order.
+  // Same rule as the hub's stripGames(): only the broad-appeal games (niche ones such as Hatama or Diplomacy
+  // School stay on the hub), in the hub's own order, never the game itself.
   function related(games, id) {
-    var self = null;
-    for (var i = 0; i < games.length; i++) if (games[i].id === id) self = games[i];
-    var tags = self ? self.tags : [];
     return games
-      .map(function (g, i) {
-        var s = 0;
-        for (var j = 0; j < g.tags.length; j++) if (tags.indexOf(g.tags[j]) !== -1) s += g.tags[j] === 'Daily' ? 0.5 : 1;
-        return { g: g, s: s, i: i };
-      })
-      .filter(function (x) { return x.g.id !== id; })
-      .sort(function (a, b) { return b.s - a.s || a.i - b.i; })
-      .slice(0, MAX)
-      .map(function (x) { return x.g; });
+      .filter(function (g) { return g.id !== id && g.appeal === 'broad'; })
+      .slice(0, MAX);
   }
   function fill(el) {
     var id = el.getAttribute('data-fm-more');
