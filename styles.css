@@ -1087,11 +1087,6 @@ footer p {
   font-size: 14px;
 }
 
-.doc-page .lang-note {
-  margin: 0;
-  font-size: 14px;
-}
-
 .doc-page .lang-slot {
   display: flex;
   min-height: 220px;
