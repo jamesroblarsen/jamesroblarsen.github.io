@@ -49,21 +49,6 @@
       "frequency": "daily",
       "image": "https://fourthmeridiangames.com/hatama/og.png?v=1",
       "added": "2026-11-12"
-    },
-    {
-      "id": "diplomacy-school",
-      "name": "Diplomacy School",
-      "url": "https://fourthmeridiangames.com/diplomacy-school-play/",
-      "page": "https://fourthmeridiangames.com/games/diplomacy-school/",
-      "tagline": "Learn the board game Diplomacy.",
-      "tags": [
-        "Learn",
-        "Strategy"
-      ],
-      "appeal": "niche",
-      "frequency": "lessons",
-      "image": "https://fourthmeridiangames.com/diplomacy-school-play/og.png?v=1",
-      "added": "2026-10-13"
     }
   ]
 }
