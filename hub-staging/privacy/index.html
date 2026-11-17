@@ -39,6 +39,10 @@
       s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
       s.setAttribute('data-cf-beacon', '{"token": "ee646f7d364542db8e29edfc21db0a1f"}');
       document.head.appendChild(s);
+      var p = document.createElement('script');
+      p.defer = true;
+      p.src = '/kit/pulse.js';
+      document.head.appendChild(p);
     })();
   </script>
 </head>
@@ -54,7 +58,10 @@
     <p>Fourth Meridian Games is run by James Larsen. The games are static pages: there is no sign-in and no server that stores anything about you, except where a game says so below.</p>
     <section id="visits">
       <h2>Counting visits</h2>
-      <p>The site and the games count visits with Cloudflare Web Analytics. It sets no cookies and stores nothing on your device; Cloudflare reports to me only totals such as page views, countries and referring sites. It runs only on fourthmeridiangames.com, never on test copies.</p>
+      <p>I count visits to see how many people play and where they find the games. Both counters below keep totals only: no cookies, no IDs, nothing that tells me who you are, and nothing shared with anyone else. They run only on fourthmeridiangames.com, never on test copies.</p>
+      <p><strong>Cloudflare Web Analytics</strong> counts page views. It stores nothing on your device and reports totals such as page views, countries and referring sites.</p>
+      <p><strong>Return visits.</strong> To count how many players come back, your browser keeps one small note in its local storage, named <code>fm:visits</code>: for each game, the first and last day you visited and on how many days. Once a day per game it sends a report to my own counter at pulse.fourthmeridiangames.com saying only: new or returning, roughly how long since your last visit, roughly how many days you have visited, and which site linked you here. The counter adds 1 to that day's totals (with your country, worked out from the connection and not stored) and keeps nothing else: no IP address, no record of you. The note on your device resets after 13 months, and the totals are deleted after 25 months.</p>
+      <p>To opt out, turn on Global Privacy Control or Do Not Track in your browser: then no report is sent and no note is kept. Clearing this site's data in your browser deletes the note.</p>
     </section>
     <section id="trendle">
       <h2>Trendle</h2>
@@ -63,17 +70,17 @@
     <section id="streetle">
       <h2>Streetle</h2>
       <p>Streetle sets no cookies and has no accounts. It keeps your results and today's progress, in your browser's local storage on your device; that never leaves your device, and clearing your browser's site data removes it.</p>
-      <p>It loads the map data, fonts and code from this site only. On fourthmeridiangames.com it also counts visits with Cloudflare Web Analytics (above) and loads the "More from Fourth Meridian" list of other games from this site.</p>
+      <p>It loads the map data, fonts and code from this site only. On fourthmeridiangames.com it also counts visits as described above and loads the "More from Fourth Meridian" list of other games from this site.</p>
     </section>
     <section id="diplomacy-school">
       <h2>Diplomacy School</h2>
       <p>Diplomacy School sets no cookies and has no accounts. It keeps which lessons you have finished, in your browser's local storage on your device; that never leaves your device, and clearing your browser's site data removes it.</p>
-      <p>It loads its code and map from this site, and its fonts from Google Fonts (so Google sees your IP address when the fonts load). On fourthmeridiangames.com it also counts visits with Cloudflare Web Analytics (above) and loads the "More from Fourth Meridian" list of other games from this site.</p>
+      <p>It loads its code and map from this site, and its fonts from Google Fonts (so Google sees your IP address when the fonts load). On fourthmeridiangames.com it also counts visits as described above and loads the "More from Fourth Meridian" list of other games from this site.</p>
     </section>
     <section id="hatama">
       <h2>Hatama</h2>
       <p>Hatama sets no cookies and has no accounts. It keeps your results, in your browser's local storage on your device; that never leaves your device, and clearing your browser's site data removes it.</p>
-      <p>It loads its code from this site, and its Batak script font from Google Fonts (so Google sees your IP address when the font loads). On fourthmeridiangames.com it also counts visits with Cloudflare Web Analytics (above) and loads the "More from Fourth Meridian" list of other games from this site.</p>
+      <p>It loads its code from this site, and its Batak script font from Google Fonts (so Google sees your IP address when the font loads). On fourthmeridiangames.com it also counts visits as described above and loads the "More from Fourth Meridian" list of other games from this site.</p>
     </section>
     <section id="contact">
       <h2>Questions</h2>
@@ -82,7 +89,7 @@
   </main>
   <footer>
     <div class="rule"><span>Fourth Meridian Games</span><span>110° W</span></div>
-    <p>© 2026 James Larsen. All rights reserved. This site sets no cookies. It counts visits with Cloudflare Web Analytics, which stores nothing on your device and shows me only totals; it loads nothing else from other sites.</p>
+    <p>© 2026 James Larsen. All rights reserved. This site sets no cookies and uses no IDs. It counts visits in totals only (see Privacy); it loads nothing else from other sites.</p>
     <p class="footer-links"><a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="../press/">Press kit</a></p>
     <p>Type: Cormorant Garamond and IBM Plex Sans, under the SIL Open Font License (<a href="../fonts/OFL-cormorant-garamond.txt">1</a>, <a href="../fonts/OFL-ibm-plex-sans.txt">2</a>).</p>
   </footer>

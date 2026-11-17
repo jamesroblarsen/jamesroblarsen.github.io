@@ -10,6 +10,13 @@
 (function () {
   if (window.__fmMore) return;
   window.__fmMore = true;
+  // The visit counter rides along with the strip, so every game gets it from the hub (see kit/pulse.js).
+  (function () {
+    var p = document.createElement('script');
+    p.defer = true;
+    p.src = 'https://fourthmeridiangames.com/kit/pulse.js';
+    document.head.appendChild(p);
+  })();
   var SITE = 'https://fourthmeridiangames.com/';
   var MAX = 3;
   var catalog = null;
