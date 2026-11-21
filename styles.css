@@ -635,6 +635,218 @@ footer p {
   text-underline-offset: 4px;
 }
 
+/* Small "Copy" beside the address: mailto does nothing where no mail app is set up. */
+.copy-address {
+  margin-left: 14px;
+  padding: 5px 9px;
+  vertical-align: middle;
+  background: transparent;
+  color: var(--muted);
+  font: 500 11px/1 var(--sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid var(--rule-strong);
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.copy-address:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+button.play {
+  cursor: pointer;
+}
+
+/* "Write to me" opens this box over the page. */
+.contact-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  margin: auto;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--rule-strong);
+  border-radius: 1px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.contact-dialog::backdrop {
+  background: rgba(4, 10, 18, 0.72);
+}
+
+.dialog-box {
+  padding: var(--pad);
+}
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.dialog-head h2 {
+  margin: 0;
+  font: 600 clamp(26px, 3.2vw, 32px)/1.1 var(--serif);
+}
+
+.dialog-close {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 400 26px/1 var(--sans);
+  border: 1px solid transparent;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  color: var(--ink);
+  border-color: var(--rule-strong);
+}
+
+.contact-form,
+.contact-thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form[hidden],
+.contact-thanks[hidden] {
+  display: none;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  color: var(--ink);
+  font: 500 12px/1 var(--sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.contact-form label:first-child {
+  margin-top: 0;
+}
+
+.contact-form .opt {
+  color: var(--faint);
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.5 var(--sans);
+  border: 1px solid var(--rule-strong);
+  border-radius: 1px;
+}
+
+.contact-form textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+  border-color: var(--gold);
+}
+
+/* Off screen for people; bots that fill every field give themselves away. */
+.contact-form .trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  min-height: 1.5em;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.form-status.error {
+  color: #f0a58f;
+}
+
+.form-status a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.dialog-actions .play {
+  align-self: auto;
+}
+
+.ghost {
+  padding: 11px 16px;
+  background: transparent;
+  color: var(--muted);
+  font: 500 12px/1 var(--sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid var(--rule-strong);
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.ghost:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.send:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.contact-thanks {
+  gap: 12px;
+}
+
+.contact-thanks:focus {
+  outline: none;
+}
+
+.contact-thanks .thanks-title {
+  margin: 0;
+  font: 600 clamp(22px, 3vw, 27px)/1.25 var(--serif);
+}
+
+.contact-thanks p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact-thanks .play {
+  margin-top: 8px;
+}
+
 @media (max-width: 980px) {
   .games {
     grid-template-columns: repeat(2, minmax(0, 1fr));
