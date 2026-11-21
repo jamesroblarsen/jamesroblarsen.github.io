@@ -54,34 +54,39 @@
   <main class="doc-page">
     <h1 class="page-title">Privacy</h1>
     <p class="doc-lede">No cookies, no accounts, no ads, nothing sold.</p>
-    <p>Fourth Meridian Games is run by James Larsen. The games are static pages: there is no sign-in and no server that stores anything about you, except where a game says so below.</p>
+    <p>Fourth Meridian Games is run by James Larsen. The games are static pages: there is no sign-in, and nothing I run keeps a record of you, except where a game says so below.</p>
     <section id="visits">
       <h2>Counting visits</h2>
       <p>I count visits to see how many people play and where they find the games. The counters below keep totals only: no cookies, no IDs, nothing that tells me who you are, and nothing shared with anyone else. They run only on fourthmeridiangames.com, never on test copies.</p>
-      <p><strong>Cloudflare Web Analytics</strong> counts page views. It stores nothing on your device and reports totals such as page views, countries and referring sites.</p>
-      <p><strong>Return visits.</strong> To count how many players come back, your browser keeps one small note in its local storage, named <code>fm:visits</code>: for each game, the first and last day you visited and on how many days. Once a day per game it sends a report to my own counter at pulse.fourthmeridiangames.com saying only: new or returning, roughly how long since your last visit, roughly how many days you have visited, and which site linked you here. The counter adds 1 to that day's totals (with your country, worked out from the connection and not stored) and keeps nothing else: no IP address, no record of you. The note on your device resets after 13 months, and the totals are deleted after 25 months.</p>
-      <p><strong>Finished games.</strong> Games that say so below also count finished daily puzzles. When you finish one, your browser sends my counter the game, the puzzle number, whether you solved it and in how many guesses. The counter adds 1 to that day's totals and keeps nothing else, and these totals are also deleted after 25 months. When you finish, the game shows you everyone's totals for that puzzle: how many played and how many solved it in each number of guesses.</p>
+      <p><strong>Cloudflare Web Analytics</strong> counts page views on every page. It stores nothing on your device and reports totals such as page views, countries and referring sites.</p>
+      <p><strong>Return visits.</strong> On this site's own pages and on Trendle, Streetle, Hatama and Glossle, your browser keeps one small note in its local storage, named <code>fm:visits</code>, to count how many players come back: for each game, the first and last day you visited and on how many days. Once a day per game it sends a report to my own counter at pulse.fourthmeridiangames.com saying only: new or returning, roughly how long since your last visit, roughly how many days you have visited, and which site linked you here. The counter adds 1 to that day's totals, including the total for your country, which Cloudflare looks up from your connection. It keeps nothing else: no IP address, no record of you. The note on your device resets after 13 months, and the totals are deleted after 25 months.</p>
+      <p><strong>Finished games.</strong> Streetle and Hatama also count finished daily puzzles. When you finish one, your browser sends my counter the game, the puzzle number, whether you solved it and in how many guesses. The counter adds 1 to that day's totals and keeps nothing else, and these totals are also deleted after 25 months. When you finish, the game shows you everyone's totals for that puzzle: how many played and how many solved it in each number of guesses.</p>
       <p>To opt out, turn on Global Privacy Control or Do Not Track in your browser: then no report is sent, no finished game is counted, and no note is kept. Clearing this site's data in your browser deletes the note.</p>
+    </section>
+    <section id="hosting">
+      <h2>Hosting</h2>
+      <p>The pages are served by GitHub Pages. Like any web host, GitHub receives standard request details such as your IP address and browser when a page loads; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. My counter and the contact form run on Cloudflare, which receives the same kind of details when your browser contacts them; the counter keeps no request logs. Each game below says which other services, if any, it loads.</p>
     </section>
     <section id="trendle">
       <h2>Trendle</h2>
-      <p>Trendle has its own privacy page: <a href="https://fourthmeridiangames.com/trendle/#privacy">Trendle privacy</a>.</p>
+      <p>Trendle keeps your results and a random player number in your browser. When you finish a Daily Challenge, it sends its own results server (at api.fourthmeridiangames.com) the date, your score, your accuracy on each chart and that random player number, and shows you how you compare with everyone else.</p>
+      <p>Trendle has its own privacy page with the details: <a href="https://fourthmeridiangames.com/trendle/#privacy">Trendle privacy</a>.</p>
     </section>
     <section id="streetle">
       <h2>Streetle</h2>
-      <p>Streetle sets no cookies and has no accounts. It keeps your results and today's progress, in your browser's local storage on your device; that never leaves your device, and clearing your browser's site data removes it.</p>
-      <p>It loads the map data, fonts and code from this site, and after you finish, the day's totals from the counter at pulse.fourthmeridiangames.com. On fourthmeridiangames.com it also counts visits as described above and loads the "More from Fourth Meridian" list of other games from this site.</p>
+      <p>Streetle sets no cookies and has no accounts. In your browser's local storage it keeps your results, today's progress, the latest totals you were shown, and whether you have seen the how-to-play. That never leaves your device, and clearing your browser's site data removes it.</p>
+      <p>It loads the map data, fonts and code from this site. After you finish, it loads everyone's totals for that map from my counter at pulse.fourthmeridiangames.com. On fourthmeridiangames.com it also counts page views and return visits as described above, and loads the "More from Fourth Meridian" list of other games from this site.</p>
       <p>When you finish the day's map, it sends a finished-game count as described above: the puzzle number, whether you solved it, and in how many guesses. It then shows you everyone's totals for that map.</p>
     </section>
     <section id="diplomacy-school">
       <h2>Diplomacy School</h2>
-      <p>Diplomacy School sets no cookies and has no accounts. It keeps which lessons you have finished, in your browser's local storage on your device; that never leaves your device, and clearing your browser's site data removes it.</p>
-      <p>It loads its code and map from this site, and its fonts from Google Fonts (so Google sees your IP address when the fonts load). On fourthmeridiangames.com it also counts visits as described above and loads the "More from Fourth Meridian" list of other games from this site.</p>
+      <p>Diplomacy School sets no cookies and has no accounts. In your browser's local storage it keeps which lessons you have finished. That never leaves your device, and clearing your browser's site data removes it.</p>
+      <p>It loads its code and map from this site, and its fonts from Google Fonts (so Google sees your IP address when they load). On fourthmeridiangames.com it also counts page views with Cloudflare Web Analytics as described above (the return-visit counter does not run here), and loads the "More from Fourth Meridian" list of other games from this site.</p>
     </section>
     <section id="hatama">
       <h2>Hatama</h2>
-      <p>Hatama sets no cookies and has no accounts. It keeps your results, in your browser's local storage on your device; that never leaves your device, and clearing your browser's site data removes it.</p>
-      <p>It loads its code from this site, and its Batak script font from Google Fonts (so Google sees your IP address when the font loads). On fourthmeridiangames.com it also counts visits as described above and loads the "More from Fourth Meridian" list of other games from this site.</p>
+      <p>Hatama sets no cookies and has no accounts. In your browser's local storage it keeps your results, the latest totals you were shown, and whether you have seen the how-to-play. That never leaves your device, and clearing your browser's site data removes it.</p>
+      <p>It loads its code from this site, and its Batak script font from Google Fonts (so Google sees your IP address when it loads). After you finish, it loads everyone's totals for that word from my counter at pulse.fourthmeridiangames.com. On fourthmeridiangames.com it also counts page views and return visits as described above, and loads the "More from Fourth Meridian" list of other games from this site.</p>
       <p>When you finish the day's word, it sends a finished-game count as described above: the puzzle number, whether you solved it, and in how many guesses. It then shows you everyone's totals for that word.</p>
     </section>
     <section id="contact">
