@@ -57,10 +57,38 @@
     <p class="contact-lede">Send feedback, suggest games you'd like to see, ask about linking your game, or anything else you'd like me to know.</p>
     <div class="contact-card">
       <p class="contact-label">Email</p>
-      <p class="contact-address"><a href="mailto:contact@fourthmeridiangames.com">contact@fourthmeridiangames.com</a></p>
-      <a class="play" href="mailto:contact@fourthmeridiangames.com">Write to me<span class="arrow" aria-hidden="true">→</span></a>
+      <p class="contact-address"><a href="mailto:contact@fourthmeridiangames.com">contact@fourthmeridiangames.com</a><button type="button" class="copy-address" hidden>Copy</button></p>
+      <a class="play" id="open-contact" href="mailto:contact@fourthmeridiangames.com">Write to me<span class="arrow" aria-hidden="true">→</span></a>
     </div>
   </main>
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
+    <div class="dialog-box">
+      <div class="dialog-head">
+        <h2 id="contact-dialog-title">Write to me</h2>
+        <button type="button" class="dialog-close" data-close aria-label="Close">×</button>
+      </div>
+      <form class="contact-form" novalidate>
+        <label for="cf-name">Name <span class="opt">(optional)</span></label>
+        <input id="cf-name" name="name" autocomplete="name" maxlength="100">
+        <label for="cf-email">Your email <span class="opt">(so I can reply)</span></label>
+        <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" spellcheck="false">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="7" maxlength="5000" required></textarea>
+        <div class="trap" aria-hidden="true"><label for="cf-extra">Leave this empty</label><input id="cf-extra" name="fm_extra" tabindex="-1" autocomplete="off"></div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <div class="dialog-actions">
+          <button type="button" class="ghost" data-close>Cancel</button>
+          <button type="submit" class="play send">Send<span class="arrow" aria-hidden="true">→</span></button>
+        </div>
+      </form>
+      <div class="contact-thanks" tabindex="-1" hidden>
+        <p class="thanks-title">Thanks, your message is on its way.</p>
+        <p>If you left your email, I'll reply there.</p>
+        <button type="button" class="play" data-close>Close</button>
+      </div>
+    </div>
+  </dialog>
+  <script src="../contact.js" defer></script>
   <footer>
     <div class="rule"><span>Fourth Meridian Games</span><span>110° W</span></div>
     <p>© 2026 James Larsen. All rights reserved. This site sets no cookies and uses no IDs. It counts visits in totals only (see Privacy); it loads nothing else from other sites.</p>
